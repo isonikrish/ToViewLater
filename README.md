@@ -1,6 +1,5 @@
 # ToViewLater
 
-### Long Description
 
 ```markdown
 # ToViewLater Chrome Extension
