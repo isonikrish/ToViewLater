@@ -1,7 +1,4 @@
-# ToViewLater
 
-
-```markdown
 # ToViewLater Chrome Extension
 
 ## Overview
@@ -36,7 +33,55 @@
 
 ### Installation Guide
 
+### Installation Guide
 
+To set up the **ToViewLater** Chrome extension, follow these steps:
+
+1. Clone the repository to your local machine:
+
+   ```bash
+   git clone https://github.com/isonikrish/ToViewLater.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd ToViewLater
+   ```
+
+3. Install the dependencies using npm:
+
+   ```bash
+   npm install
+   ```
+
+4. Build the extension using Vite:
+
+   ```bash
+   npm run build
+   ```
+
+5. Open Google Chrome and go to the Extensions page by typing `chrome://extensions` in the address bar.
+
+6. Enable the "Developer mode" toggle switch located at the top right corner of the page.
+
+7. Click on the "Load unpacked" button and select the `dist` folder within the project directory.
+
+8. The **ToViewLater** Chrome extension should now be installed and ready to use.
+
+
+
+### Contribution Guidelines
+
+We welcome contributions to enhance the **ToViewLater** extension! Whether you have a new feature in mind, improvements, or bug fixes, feel free to submit an issue or a pull request.
+
+### License
+
+This project is licensed under the MIT License, allowing for open usage and modification.
+
+## Conclusion
+
+The **ToViewLater** Chrome extension aims to simplify the way users manage their online resources, ensuring they can save, organize, and revisit content with ease. With its intuitive interface and powerful features, it's a must-have tool for anyone looking to streamline their web browsing experience.
 
 ### Contribution Guidelines
 
