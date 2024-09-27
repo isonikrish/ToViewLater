@@ -1,10 +1,19 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import App from "./App.jsx";
-import "./index.css";
+import App from "./App.jsx"; // Ensure this matches your file name
+import './index.css'
+import LinkProvider from './context/LinkContext.jsx'
+const rootElement = document.getElementById("root");
 
-createRoot(document.getElementById("root")).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-);
+if (rootElement) {
+  createRoot(rootElement).render(
+    <StrictMode>
+      <LinkProvider>
+        <App />
+      </LinkProvider>
+
+    </StrictMode>
+  );
+} else {
+  console.error("Root element not found");
+}
