@@ -27,8 +27,13 @@ const LinkProvider = ({ children }) => {
         localStorage.setItem('links', JSON.stringify(updatedLinks));
     };
 
+    const getCurrentUrl = async () => {
+        const [tab] = await chrome.tabs.query({active: true, lastFocusedWindow: true});
+        return tab.url
+    }
+
     return (
-        <LinkContext.Provider value={{ links, addLink, deleteLink }}>
+        <LinkContext.Provider value={{ links, addLink, deleteLink, getCurrentUrl }}>
             {children}
         </LinkContext.Provider>
     );
