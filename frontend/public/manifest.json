@@ -14,5 +14,6 @@
   "icons": {
     
     "128": "icons/logo.png"
-  }
+  },
+  "options_page": "options.html"
 }
