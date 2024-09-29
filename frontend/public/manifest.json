@@ -5,7 +5,8 @@
   "description": "Save links to view later.",
   "permissions": [
     "storage", 
-    "activeTab"
+    "activeTab",
+    "tabs"
   ],
   "action": {
     "default_popup": "index.html",

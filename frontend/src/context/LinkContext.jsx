@@ -28,8 +28,13 @@ const LinkProvider = ({ children }) => {
     };
 
     const getCurrentUrl = async () => {
-        const [tab] = await chrome.tabs.query({active: true, lastFocusedWindow: true});
-        return tab.url
+        try {
+            const [tab] = await chrome.tabs.query({ active: true, lastFocusedWindow: true });
+            return tab.url;
+        } catch (error) {
+            console.error('Error fetching current tab URL:', error);
+            return '';
+        }
     }
 
     return (
