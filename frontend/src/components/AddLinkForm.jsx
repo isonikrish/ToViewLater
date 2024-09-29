@@ -8,12 +8,15 @@ const AddLinkForm = () => {
     const [link, setLink] = useState('');
     const [note, setNote] = useState('');
     const [copied, setCopied] = useState(false);
-
+    const [category, setCatgeory] = useState('');
+    const [reminder, setReminder] = useState('')
     const handleSubmit = (e) => {
         e.preventDefault();
-        addLink(link, note);
+        addLink(link, note, category,reminder);
         setLink('');
         setNote('');
+        setCatgeory('')
+        setReminder('')
     };
 
     const handleCopyUrl = async () => {
@@ -50,6 +53,19 @@ const AddLinkForm = () => {
                     </span>
                 </div>
             </div>
+            <input
+                type="text"
+                value={category}
+                onChange={(e) => setCatgeory(e.target.value)}
+                placeholder="Enter category"
+                className="border border-gray-300 p-2 h-full w-full rounded flex-grow my-3"
+                required
+            />
+            <input
+                type="datetime-local"
+                onChange={(e) => setReminder(e.target.value)}
+                className="p-2 border rounded my-4"
+            />
 
             <textarea
                 value={note}
@@ -59,7 +75,7 @@ const AddLinkForm = () => {
             ></textarea>
             <button type="submit" className="bg-darkBlue text-white p-2 rounded hover:bg-blue-600 flex items-center gap-3">
                 Bookmark
-                <IoMdBookmark className="text-2xl"/>
+                <IoMdBookmark className="text-2xl" />
 
             </button>
         </form>
