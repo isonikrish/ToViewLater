@@ -7,8 +7,8 @@
   "permissions": [
     "storage", 
     "activeTab",
-    "tabs",
-    "notifications"
+    "notifications",
+    "sidePanel"
   ],
   "action": {
      "default_popup": "./index.html", 
