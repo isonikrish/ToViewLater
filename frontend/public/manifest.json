@@ -11,11 +11,11 @@
     "notifications"
   ],
   "action": {
-     "default_popup": "frontend/index.html", 
-    "default_icon": "frontend/public/icons/logo.png"
+     "default_popup": "./index.html", 
+    "default_icon": "./icons/logo.png"
   },
   "icons": {
     
-    "128": "frontend/public/icons/logo.png"
+    "128": "./icons/logo.png"
   }
 }
