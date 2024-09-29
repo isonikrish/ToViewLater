@@ -6,7 +6,9 @@
   "permissions": [
     "storage", 
     "activeTab",
-    "tabs"
+    "tabs",
+    "notifications",
+    "http://localhost/*"
   ],
   "action": {
     "default_popup": "index.html",
