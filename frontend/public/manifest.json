@@ -3,7 +3,10 @@
   "name": "ToViewLater",
   "version": "1.0",
   "description": "Save links to view later.",
-  "permissions": ["storage"],
+  "permissions": [
+    "storage", 
+    "activeTab"
+  ],
   "action": {
     "default_popup": "index.html",
     "default_icon": {
