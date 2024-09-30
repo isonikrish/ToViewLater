@@ -9,20 +9,20 @@ const AddLinkForm = () => {
     const [note, setNote] = useState('');
     const [copied, setCopied] = useState(false);
     const [category, setCatgeory] = useState('');
-    const [reminder, setReminder] = useState('')
     const handleSubmit = (e) => {
         e.preventDefault();
-        addLink(link, note, category,reminder);
+        addLink(link, note, category);
         setLink('');
         setNote('');
         setCatgeory('')
-        setReminder('')
     };
 
     const handleCopyUrl = async () => {
         const currentUrl = await getCurrentUrl();
-        setLink(currentUrl);
-        setCopied(true);
+        if (currentUrl) {
+            setLink(currentUrl);
+            setCopied(true);
+        }
     };
 
     return (
@@ -61,11 +61,7 @@ const AddLinkForm = () => {
                 className="border border-gray-300 p-2 h-full w-full rounded flex-grow my-3"
                 required
             />
-            <input
-                type="datetime-local"
-                onChange={(e) => setReminder(e.target.value)}
-                className="p-2 border rounded my-4"
-            />
+            
 
             <textarea
                 value={note}

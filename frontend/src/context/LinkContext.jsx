@@ -17,23 +17,20 @@ const LinkProvider = ({ children }) => {
         });
     }, []);
 
-    const addLink = (link, note, category, reminder) => {
+    const addLink = (link, note, category) => {
         const newLink = {
             id: Date.now(),
             link,
             note,
             bookmarkedAt: new Date().toISOString(),
             category,
-            reminder,
+
         };
         const updatedLinks = [...links, newLink];
 
         setLinks(updatedLinks);
         // Save the updated links array to local storage
         localStorage.setItem('links', JSON.stringify(updatedLinks));
-        if (reminder) {
-            scheduleNotification(newLink);
-        }
     };
 
     const deleteLink = (id) => {
@@ -45,31 +42,22 @@ const LinkProvider = ({ children }) => {
 
     const getCurrentUrl = async () => {
         try {
-            const [tab] = await chrome.tabs.query({ active: true, lastFocusedWindow: true });
-            return tab.url;
+            // Since side panels can have different context, ensure the correct window is targeted
+            const queryOptions = { active: true, lastFocusedWindow: true };
+            const [tab] = await chrome.tabs.query(queryOptions);
+            if (tab && tab.url) {
+                return tab.url;
+            } else {
+                console.error('No active tab found or no URL available');
+                return '';
+            }
         } catch (error) {
             console.error('Error fetching current tab URL:', error);
             return '';
         }
     }
-    const scheduleNotification = (link) => {
-        const reminderTime = new Date(link.reminder).getTime();
-        const currentTime = Date.now();
-
-        if (reminderTime > currentTime) {
-            const timeUntilReminder = reminderTime - currentTime;
-
-            setTimeout(() => {
-                chrome.notifications.create({
-                    type: 'basic',
-                    iconUrl: icon,
-                    title: 'Reminder for your link!',
-                    message: `Don't forget to check this link: ${link}`,
-                    priority: 2
-                });
-            }, timeUntilReminder);
-        }
-    };
+    
+    
 
     return (
         <LinkContext.Provider value={{ links, addLink, deleteLink, getCurrentUrl }}>
