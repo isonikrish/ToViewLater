@@ -19,5 +19,7 @@
       "128": "icons/logo.png"
     }
   },
-  "options_page": "options_page/options.html"
+  "side_panel": {
+    "default_path": "index.html"
+  }
 }
