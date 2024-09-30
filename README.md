@@ -1,9 +1,21 @@
 
-# ToViewLater Chrome Extension
+<p align="center"><a href="https://darkreader.org" target="_blank" rel="noreferrer noopener"><img width="100" alt="Dark Reader's mascot" src="./docs/assets/logo.png"></a></p>
 
-## Overview
+<p align="center">
+<img alt="Chrome Web Store" src="https://img.shields.io/badge/Chrome-141e24.svg?&style=for-the-badge&logo=google-chrome&logoColor=white"></a>
+<p>
+
+<h1 align="center">
+ToViewLater Chrome Extension
+</h1>
 
 **ToViewLater** is a user-friendly Chrome extension designed for individuals who often find themselves wanting to save interesting articles, videos, or resources to view at a later time. With this extension, users can easily save links and add personal notes, making it an ideal tool for researchers, students, and casual web surfers alike. 
+
+### Previews
+
+| ![](./docs/assets/thumbnail.png) | ![](./docs/assets/preview-1.png)
+-|-
+
 
 ### Key Features
 
@@ -31,7 +43,6 @@
 - **React**: A JavaScript library for building user interfaces, ensuring a smooth and responsive user experience.
 - **Node.js**: A JavaScript runtime environment for building the backend server.
 
-### Installation Guide
 
 ### Installation Guide
 
@@ -70,18 +81,6 @@ To set up the **ToViewLater** Chrome extension, follow these steps:
 8. The **ToViewLater** Chrome extension should now be installed and ready to use.
 
 
-
-### Contribution Guidelines
-
-We welcome contributions to enhance the **ToViewLater** extension! Whether you have a new feature in mind, improvements, or bug fixes, feel free to submit an issue or a pull request.
-
-### License
-
-This project is licensed under the MIT License, allowing for open usage and modification.
-
-## Conclusion
-
-The **ToViewLater** Chrome extension aims to simplify the way users manage their online resources, ensuring they can save, organize, and revisit content with ease. With its intuitive interface and powerful features, it's a must-have tool for anyone looking to streamline their web browsing experience.
 
 ### Contribution Guidelines
 
