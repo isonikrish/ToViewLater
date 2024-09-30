@@ -9,12 +9,12 @@ const LinkProvider = ({ children }) => {
         // Load links from local storage
         const storedLinks = JSON.parse(localStorage.getItem('links')) || [];
         setLinks(storedLinks);
-        // Schedule notifications for all existing links with reminders
-        storedLinks.forEach(link => {
-            if (link.reminder) {
-                scheduleNotification(link);
-            }
-        });
+        // // Schedule notifications for all existing links with reminders
+        // storedLinks.forEach(link => {
+        //     if (link.reminder) {
+        //         scheduleNotification(link);
+        //     }
+        // });
     }, []);
 
     const addLink = (link, note, category) => {

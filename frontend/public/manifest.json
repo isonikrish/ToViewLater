@@ -6,8 +6,7 @@
   "description": "Save links to view later.",
   "permissions": [
     "storage", 
-    "activeTab",
-    "notifications"
+    "activeTab"
   ],
   "icons": {
     "128": "./icons/logo.png"
