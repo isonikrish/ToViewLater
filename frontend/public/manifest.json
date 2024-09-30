@@ -18,8 +18,5 @@
       
       "128": "icons/logo.png"
     }
-  },
-  "side_panel": {
-    "default_path": "index.html"
   }
 }
