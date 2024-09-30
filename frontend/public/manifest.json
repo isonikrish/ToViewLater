@@ -8,7 +8,8 @@
     "storage", 
     "activeTab",
     "notifications",
-    "sidePanel"
+    "sidePanel",
+    "tabs"
   ],
   "icons": {
     "128": "./icons/logo.png"
