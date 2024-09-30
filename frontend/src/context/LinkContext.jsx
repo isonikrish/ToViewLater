@@ -24,7 +24,6 @@ const LinkProvider = ({ children }) => {
             note,
             bookmarkedAt: new Date().toISOString(),
             category,
-
         };
         const updatedLinks = [...links, newLink];
 
@@ -42,22 +41,14 @@ const LinkProvider = ({ children }) => {
 
     const getCurrentUrl = async () => {
         try {
-            // Since side panels can have different context, ensure the correct window is targeted
-            const queryOptions = { active: true, lastFocusedWindow: true };
-            const [tab] = await chrome.tabs.query(queryOptions);
-            if (tab && tab.url) {
-                return tab.url;
-            } else {
-                console.error('No active tab found or no URL available');
-                return '';
-            }
+            const [tab] = await chrome.tabs.query({ active: true, lastFocusedWindow: true });
+            return tab.url;
         } catch (error) {
             console.error('Error fetching current tab URL:', error);
             return '';
         }
     }
-    
-    
+
 
     return (
         <LinkContext.Provider value={{ links, addLink, deleteLink, getCurrentUrl }}>

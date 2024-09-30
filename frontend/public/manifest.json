@@ -7,15 +7,17 @@
   "permissions": [
     "storage", 
     "activeTab",
-    "notifications",
-    "sidePanel",
-    "tabs"
+    "notifications"
   ],
   "icons": {
     "128": "./icons/logo.png"
   },
-  "background": {
-    "service_worker": "serviceWorker.js"
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": {
+      
+      "128": "icons/logo.png"
+    }
   },
   "side_panel": {
     "default_path": "index.html"
